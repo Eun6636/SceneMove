@@ -1633,6 +1633,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sand 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5895466165155945477, guid: 68c5b749a9aa2f9428a406881fc6d481,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7461267099246308886, guid: 68c5b749a9aa2f9428a406881fc6d481,
         type: 3}
       propertyPath: m_RootOrder
@@ -1760,6 +1765,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Water
+      objectReference: {fileID: 0}
+    - target: {fileID: 3016175424401316374, guid: 00a8346fcb0e22442b8bad5f0dcf0048,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
