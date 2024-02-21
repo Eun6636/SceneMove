@@ -1398,7 +1398,7 @@ MonoBehaviour:
   dangerSoaring: 0.7
   dangerLayer:
     serializedVersion: 2
-    m_Bits: 2147483648
+    m_Bits: 0
   HelpURL: nvjob.github.io/unity/nvjob-boids
   ReportAProblem: nvjob.github.io/support
   Patrons: nvjob.github.io/patrons
@@ -1429,6 +1429,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Underwater
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531277807752180169, guid: ed13d6c16df1ff9469675ad10c637dfe,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4531277807752180173, guid: ed13d6c16df1ff9469675ad10c637dfe,
         type: 3}
@@ -1789,6 +1794,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sand 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5895466165155945477, guid: 68c5b749a9aa2f9428a406881fc6d481,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7461267099246308886, guid: 68c5b749a9aa2f9428a406881fc6d481,
         type: 3}
       propertyPath: m_RootOrder
@@ -1935,6 +1945,11 @@ PrefabInstance:
       propertyPath: camRig
       value: 
       objectReference: {fileID: 2043210048}
+    - target: {fileID: 3677732437614575716, guid: 380e869112d5086468a3a3992e91109d,
+        type: 3}
+      propertyPath: layerFlock.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4622948576541377396, guid: 380e869112d5086468a3a3992e91109d,
         type: 3}
       propertyPath: m_Name
