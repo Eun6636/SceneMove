@@ -4222,9 +4222,9 @@ MonoBehaviour:
   migrationFrequency: 0.03
   posChangeFrequency: 0.7
   smoothChFrequency: 6
-  birdPref: {fileID: 3749213457490053405, guid: c896f0bfe24eae442b2d7f5f5639215d,
+  birdPref: {fileID: 3749213457490053405, guid: f8499c9fbc14919489d137acc5d4c434,
     type: 3}
-  birdsNum: 700
+  birdsNum: 400
   birdSpeed: 1
   fragmentedBirds: 7
   fragmentedBirdsYLimit: 0.384
@@ -4253,6 +4253,110 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -30.63, y: 6.05, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &774781307
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 774781309}
+  - component: {fileID: 774781308}
+  m_Layer: 0
+  m_Name: "FishFlock(\uC790\uCCB4\uC81C\uC791) (2)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &774781308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774781307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3360fc7e58311744a8ff23f165884482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  c_prefebFish: {fileID: 3749213457490053405, guid: c896f0bfe24eae442b2d7f5f5639215d,
+    type: 3}
+  p_prefebFish: {fileID: 774781307}
+  m_Fish: 40
+  m_Boundary: 15
+  m_Fishes: []
+  m_TargetPosition: {x: 41.9, y: 4.24, z: 0}
+  centerPosition: {x: 41.9, y: 4.24, z: 0}
+--- !u!4 &774781309
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774781307}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 41.9, y: 4.24, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &933968952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 933968954}
+  - component: {fileID: 933968953}
+  m_Layer: 0
+  m_Name: "FishFlock(\uC790\uCCB4\uC81C\uC791)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &933968953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933968952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3360fc7e58311744a8ff23f165884482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  c_prefebFish: {fileID: 3866908435750393346, guid: 9a93c55b6e7d95b4bb8fccdd822ba704,
+    type: 3}
+  p_prefebFish: {fileID: 933968952}
+  m_Fish: 40
+  m_Boundary: 15
+  m_Fishes: []
+  m_TargetPosition: {x: -3.98, y: 4.24, z: 0}
+  centerPosition: {x: -3.98, y: 4.24, z: 46.4}
+--- !u!4 &933968954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933968952}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.98, y: 4.24, z: 46.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4402,9 +4506,9 @@ MonoBehaviour:
   migrationFrequency: 0.03
   posChangeFrequency: 0.7
   smoothChFrequency: 6
-  birdPref: {fileID: 3866908435750393346, guid: 9a93c55b6e7d95b4bb8fccdd822ba704,
+  birdPref: {fileID: 3866908435750393346, guid: c725ae873130f8240a0bb0c77cce4d18,
     type: 3}
-  birdsNum: 700
+  birdsNum: 400
   birdSpeed: 1
   fragmentedBirds: 7
   fragmentedBirdsYLimit: 0.384
@@ -5349,9 +5453,9 @@ MonoBehaviour:
   migrationFrequency: 0.03
   posChangeFrequency: 0.7
   smoothChFrequency: 6
-  birdPref: {fileID: 1534700291726900181, guid: 4cafec3b7c2a8dc4d9894f52b60504ba,
+  birdPref: {fileID: 1534700291726900181, guid: 27f50b676bdd9224a98c8624d64f1da2,
     type: 3}
-  birdsNum: 700
+  birdsNum: 400
   birdSpeed: 1
   fragmentedBirds: 7
   fragmentedBirdsYLimit: 0.384
@@ -5379,7 +5483,7 @@ Transform:
   m_GameObject: {fileID: 1608465095}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.83, y: 6.05, z: 0}
+  m_LocalPosition: {x: 32.4, y: 6.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6028,6 +6132,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 611871778}
   m_LocalEulerAnglesHint: {x: -64.226, y: -90.406, z: -92.685}
+--- !u!1 &2103435425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2103435427}
+  - component: {fileID: 2103435426}
+  m_Layer: 0
+  m_Name: "FishFlock(\uC790\uCCB4\uC81C\uC791) (1)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2103435426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103435425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3360fc7e58311744a8ff23f165884482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  c_prefebFish: {fileID: 1534700291726900181, guid: 4cafec3b7c2a8dc4d9894f52b60504ba,
+    type: 3}
+  p_prefebFish: {fileID: 2103435425}
+  m_Fish: 40
+  m_Boundary: 15
+  m_Fishes: []
+  m_TargetPosition: {x: -52.3, y: 4.24, z: 0}
+  centerPosition: {x: -52.3, y: 4.24, z: 0}
+--- !u!4 &2103435427
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103435425}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -52.3, y: 4.24, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -6043,3 +6199,6 @@ SceneRoots:
   - {fileID: 1608465098}
   - {fileID: 159139263}
   - {fileID: 1867829573}
+  - {fileID: 933968954}
+  - {fileID: 2103435427}
+  - {fileID: 774781309}

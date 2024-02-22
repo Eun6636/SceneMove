@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9171316755279308696}
   - component: {fileID: 4197956948335197033}
   - component: {fileID: 877194147974688873}
+  - component: {fileID: -7375238824842930200}
   m_Layer: 0
   m_Name: Fish 2a Pref
   m_TagString: Untagged
@@ -83,3 +84,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-7375238824842930200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534700291726900181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cc19b19b739bc449a1f5cc8e91d8c1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MaxSpeed: 7
+  m_MaxTurnSpeed: 5
+  m_Speed: 5
+  m_NeighborDistance: 35
