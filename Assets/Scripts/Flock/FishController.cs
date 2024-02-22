@@ -2,17 +2,17 @@ using UnityEngine;
 
 public class FishController : MonoBehaviour
 {
-	public float m_MaxSpeed = 2.0f;  //최고 스피드
-	public float m_MaxTurnSpeed = 0.5f;  //회전력
-	public float m_Speed;   //초기속도
-	public float m_NeighborDistance = 3.0f;  //주변 물고기와의 거리
-	private bool m_IsTurning = false;
+	public float MaxSpeed = 2.0f;  //최고 스피드
+	public float MaxTurnSpeed = 0.5f;  //회전력
+	public float Speed;   //초기속도
+	public float NeighborDistance = 3.0f;  //주변 물고기와의 거리
+	private bool IsTurning = false;
 
 	private Flock flock;
 
 	void Start()
 	{
-		m_Speed = Random.Range(0.5f, m_MaxSpeed);  //물고기 초기 속도 설정
+		Speed = Random.Range(0.5f, MaxSpeed);  //물고기 초기 속도 설정
 		flock = GetComponentInParent<Flock>(); //부모 스크립트
 	}
 
@@ -20,13 +20,13 @@ public class FishController : MonoBehaviour
 	{
 		GetIsTurning();
 
-		if (m_IsTurning) //물고기가 영역안에 들어가 있을때
+		if (IsTurning) //물고기가 영역안에 들어가 있을때
 		{
 			Vector3 direction = Vector3.zero - transform.position; 
 			transform.rotation = Quaternion.Slerp(transform.rotation,
 				Quaternion.LookRotation(direction),
 				TurnSpeed() * Time.deltaTime);
-			m_Speed = Random.Range(0.5f, m_MaxSpeed);
+			Speed = Random.Range(0.5f, MaxSpeed);
 		}
 		else
 		{
@@ -34,20 +34,20 @@ public class FishController : MonoBehaviour
 				SetRotation();
 		}
 
-		transform.Translate(0, 0, Time.deltaTime * m_Speed);
+		transform.Translate(0, 0, Time.deltaTime * Speed);
 	}
 
 	//물고기가 경계에 다다르면 회전 상태를 설정
 	void GetIsTurning()
 	{
 		//물고기가 영역안에 들어있을때임
-		if (Vector3.Distance(transform.position, Vector3.zero) >= flock.m_Boundary)
+		if (Vector3.Distance(transform.position, Vector3.zero) >= flock.Boundary)
 		{
-			m_IsTurning = true;
+			IsTurning = true;
 		}
 		else
 		{
-			m_IsTurning = false;
+			IsTurning = false;
 		}
 	}
 
@@ -56,13 +56,13 @@ public class FishController : MonoBehaviour
 	void SetRotation()
 	{
 		GameObject[] fishes;
-		fishes = flock.m_Fishes; 
+		fishes = flock.Fishes; 
 
 		Vector3 center = Vector3.zero;  //그룹의 중심
 		Vector3 avoid = Vector3.zero;   //회피를 위한 백터
 		float speed = 0.1f;   //그룹의 평균 속도
 
-		Vector3 targetPosition = flock.m_TargetPosition; 
+		Vector3 targetPosition = flock.TargetPosition; 
 
 		float distance;
 		int groupSize = 0;
@@ -75,7 +75,7 @@ public class FishController : MonoBehaviour
 				distance = Vector3.Distance(fishes[i].transform.position, transform.position);
 
 				//주변 물고기가 일정 범위내 있을경우
-				if (distance <= m_NeighborDistance)
+				if (distance <= NeighborDistance)
 				{
 					center += fishes[i].transform.position; //그룹의 중심을 업데이트
 					groupSize++;
@@ -89,7 +89,7 @@ public class FishController : MonoBehaviour
 
 					//주변 물고기의 평균 속도를 업데이트
 					FishController anotherFish = fishes[i].GetComponent<FishController>();
-					speed += anotherFish.m_Speed;
+					speed += anotherFish.Speed;
 				}
 			}
 		}
@@ -99,7 +99,7 @@ public class FishController : MonoBehaviour
 		{
 			//그룹의 중심을 계산하고 이동 목표 지점으로 향하도록
 			center = center / groupSize + (targetPosition - transform.position);
-			m_Speed = speed / groupSize; //물고기의 평균 속도를 업데이트
+			Speed = speed / groupSize; //물고기의 평균 속도를 업데이트
 
 			Vector3 direction = (center + avoid) - transform.position;  //이동방향을 구함
 			if (direction != Vector3.zero) //이동 방향이 존재한다면 아래의 코드를 실행
@@ -115,6 +115,6 @@ public class FishController : MonoBehaviour
 	//회전속도 랜덤으로 반환
 	float TurnSpeed()
 	{
-		return Random.Range(0.2f, m_MaxTurnSpeed);
+		return Random.Range(0.2f, MaxTurnSpeed);
 	}
 }

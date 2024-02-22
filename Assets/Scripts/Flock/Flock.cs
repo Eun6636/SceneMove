@@ -6,30 +6,30 @@ public class Flock : MonoBehaviour
     public GameObject p_prefebFish;  //상위 프리팹
     public int m_Fish = 30;   // 생성할 물고기
 
-    public int m_Boundary = 7;  //물고기가 자유롭게 움직일수 있는 경계
-    public GameObject[] m_Fishes;
-    public Vector3 m_TargetPosition = Vector3.zero;
+    public int Boundary = 7;  //물고기가 자유롭게 움직일수 있는 경계
+    public GameObject[] Fishes;
+    public Vector3 TargetPosition = Vector3.zero;
 
     public Vector3 centerPosition; //기준이 되는 좌표
 
     void Start()
     {
-        m_Fishes = new GameObject[m_Fish];
+        Fishes = new GameObject[m_Fish];
 
-        m_TargetPosition = centerPosition;
+        TargetPosition = centerPosition;
 
         for (int i = 0; i < m_Fish; i++)
         {
             Vector3 position = centerPosition + new Vector3(
-                Random.Range(-m_Boundary, m_Boundary),
-                Random.Range(-m_Boundary, m_Boundary),
-                Random.Range(-m_Boundary, m_Boundary)
+                Random.Range(-Boundary, Boundary),
+                Random.Range(-Boundary, Boundary),
+                Random.Range(-Boundary, Boundary)
             );
 
             GameObject fish = (GameObject)Instantiate(c_prefebFish, position, Quaternion.identity);
 
             fish.transform.parent = p_prefebFish.transform; //자식 오브젝트로 엮음
-            m_Fishes[i] = fish;
+            Fishes[i] = fish;
         }
     }
 
@@ -42,10 +42,10 @@ public class Flock : MonoBehaviour
     {
         if (Random.Range(1, 10000) < 50)
         {
-            m_TargetPosition = new Vector3(
-                Random.Range(m_TargetPosition.x -m_Boundary, m_TargetPosition.x + m_Boundary),
+            TargetPosition = new Vector3(
+                Random.Range(TargetPosition.x -Boundary, TargetPosition.x + Boundary),
                 Random.Range(3, 13),
-                Random.Range(m_TargetPosition.z - m_Boundary, m_TargetPosition.z + m_Boundary)
+                Random.Range(TargetPosition.z - Boundary, TargetPosition.z + Boundary)
             );
         }
     }
